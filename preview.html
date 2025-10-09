@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preview Resume</title>
+  <title>Resume Preview</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/preview.js"></script>
 </head>
 <body>
-  <h1>Preview Your Resume</h1>
-  <div id="resumePreview"></div>
-  <a href="resume.html" class="btn">Finalize & Download</a>
+  <header>
+    <h1>Resume Preview</h1>
+    <p>Check your resume details below. You can go back to edit if needed.</p>
+  </header>
+
+  <main>
+    <div id="resumePreview"></div>
+
+    <div class="buttons">
+      <a href="form.html" class="btn-secondary">Edit Information</a>
+      <a href="resume.html" class="btn-primary">Finalize & Print</a>
+    </div>
+  </main>
 </body>
 </html>
