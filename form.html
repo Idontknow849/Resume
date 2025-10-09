@@ -3,29 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume Form</title>
+  <title>Create Resume</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/form.js"></script>
 </head>
 <body>
-  <h1>Enter Your Details</h1>
-  <form id="resumeForm">
-    <label>Name: <input type="text" id="name" required></label><br>
-    <label>Email: <input type="email" id="email" required></label><br>
-    <label>Phone: <input type="text" id="phone" required></label><br>
-    <label>Profile: 
-      <select id="profile">
-        <option value="fresher">Fresher</option>
-        <option value="experienced">Experienced</option>
-      </select>
-    </label><br>
-    <div id="experienceSection" style="display:none;">
-      <label>Experience Details: <textarea id="experience"></textarea></label><br>
-    </div>
-    <label>Education: <textarea id="education" required></textarea></label><br>
-    <label>Skills: <textarea id="skills" required></textarea></label><br>
-    <label>Certificates: <textarea id="certificates"></textarea></label><br>
-    <button type="submit" class="btn">Preview Resume</button>
-  </form>
+  <header>
+    <h1>Create Your Resume</h1>
+  </header>
+
+  <main>
+    <form id="resumeForm">
+      <section>
+        <h2>Personal Information</h2>
+        <input type="text" name="fullName" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="address" placeholder="Address">
+      </section>
+
+      <section>
+        <h2>Career Status</h2>
+        <select name="status" id="status" required>
+          <option value="">-- Select --</option>
+          <option value="Fresher">Fresher</option>
+          <option value="Experienced">Experienced</option>
+        </select>
+      </section>
+
+      <section id="experienceSection" style="display:none;">
+        <h2>Experience</h2>
+        <textarea name="experience" rows="5" placeholder="Describe your experience..."></textarea>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <textarea name="education" rows="4" placeholder="Add your education details..." required></textarea>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <textarea name="skills" rows="3" placeholder="E.g. HTML, CSS, JavaScript" required></textarea>
+      </section>
+
+      <section>
+        <h2>Certificates</h2>
+        <textarea name="certificates" rows="3" placeholder="Add your certificates..."></textarea>
+      </section>
+
+      <button type="submit" class="btn-primary">Preview Resume</button>
+    </form>
+  </main>
 </body>
 </html>
