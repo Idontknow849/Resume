@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Resume</title>
+  <title>Your Resume</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
-  <script defer src="assets/js/pdf.js"></script>
+  <script defer src="assets/js/resume.js"></script>
 </head>
 <body>
-  <h1>Your Resume</h1>
-  <div id="finalResume"></div>
-  <button id="downloadBtn" class="btn">Download as PDF</button>
+  <header>
+    <h1>Your Resume</h1>
+  </header>
+
+  <main>
+    <div id="finalResume"></div>
+
+    <div class="buttons no-print">
+      <button id="printBtn" class="btn-primary">Print / Save as PDF</button>
+      <a href="form.html" class="btn-secondary">Edit Information</a>
+    </div>
+  </main>
 </body>
 </html>
