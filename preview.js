@@ -1,13 +1,35 @@
 const previewDiv = document.getElementById('resumePreview');
-const data = JSON.parse(localStorage.getItem('resumeData'));
-if (data) {
-  previewDiv.innerHTML = `
-    <h2>${data.name}</h2>
-    <p>Email: ${data.email} | Phone: ${data.phone}</p>
-    <p><strong>Profile:</strong> ${data.profile}</p>
-    ${data.profile === 'experienced' ? `<p><strong>Experience:</strong><br>${data.experience}</p>` : ''}
-    <p><strong>Education:</strong><br>${data.education}</p>
-    <p><strong>Skills:</strong><br>${data.skills}</p>
-    <p><strong>Certificates:</strong><br>${data.certificates}</p>
-  `;
-}
+
+// Get stored resume data
+const data = JSON.parse(localStorage.getItem('resumeData')) || {};
+
+// Build resume preview HTML
+previewDiv.innerHTML = `
+  <section>
+    <h2>${data.fullName || ''}</h2>
+    <p><strong>Email:</strong> ${data.email || ''}</p>
+    <p><strong>Phone:</strong> ${data.phone || ''}</p>
+    <p><strong>Address:</strong> ${data.address || ''}</p>
+  </section>
+
+  <section>
+    <h3>Education</h3>
+    <p>${data.education || ''}</p>
+  </section>
+
+  <section>
+    <h3>Skills</h3>
+    <p>${data.skills || ''}</p>
+  </section>
+
+  ${data.status === 'Experienced' ? `
+  <section>
+    <h3>Experience</h3>
+    <p>${data.experience || ''}</p>
+  </section>` : ''}
+
+  <section>
+    <h3>Certificates</h3>
+    <p>${data.certificates || ''}</p>
+  </section>
+`;
