@@ -1,35 +1,55 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 20px;
-  background: #f5f7fa;
+  padding: 0;
+  background: #f8f9fa;
   color: #333;
+}
+
+header, footer {
   text-align: center;
-}
-header {
-  margin-top: 10%;
-}
-h1 { color: #005f99; }
-.btn {
-  display: inline-block;
-  background: #005f99;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-form {
-  background: white;
   padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #0d6efd;
+  color: white;
 }
-textarea, input, select {
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input, textarea, select {
   width: 100%;
-  margin: 5px 0 15px;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  margin: 8px 0;
   border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary, .btn-secondary, button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary, button {
+  background: #0d6efd;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
 }
