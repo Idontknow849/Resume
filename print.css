@@ -1,4 +1,14 @@
 @media print {
-  button, .btn { display: none; }
-  body { background: white; color: black; }
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  .no-print, button, .btn-secondary, .btn-primary {
+    display: none !important;
+  }
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+  }
 }
